@@ -93,3 +93,29 @@ deviceContainerA.forEach(value=>{
         event.target.nextElementSibling.style.transform = `translate(5px)`;
     })
 })
+
+// FOOTER ANIMATION
+
+const footerLi = document.querySelectorAll('.footer-underline-ani');
+
+footerLi.forEach((value)=>{
+    value.addEventListener('mouseenter' , (event)=>{
+        event.target.style.textDecoration = `underline`
+    })
+    value.addEventListener('mouseleave' , (event)=>{
+        event.target.style.textDecoration = `none`
+    })
+})
+
+function scrollTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+document.querySelector('.up-btn').addEventListener(('click') , function(){
+    scrollTop();
+})
+
+
