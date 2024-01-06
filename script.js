@@ -119,3 +119,18 @@ document.querySelector('.up-btn').addEventListener(('click') , function(){
 })
 
 
+function matchMediaQuery(){
+    let match = window.matchMedia('(max-width: 400px)');
+    let device = document.querySelector('.device-card')
+    let buscard = document.querySelector('.bus-card')
+    if(match.matches){
+        device.classList.remove('container')
+        buscard.classList.remove('container')
+    }
+}
+
+matchMediaQuery();
+
+window.addEventListener('resize' , ()=>{
+    matchMediaQuery();
+})
