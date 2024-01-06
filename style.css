@@ -10,7 +10,6 @@
     --text-color: #262626;
 }
 
-
 nav {
     height: 55px;
     background-color: red;
@@ -85,16 +84,13 @@ nav {
     color: white;
 }
 
-
 .strip a:hover {
     text-decoration: underline;
     color: white;
 }
 
-
 .container {
-    width: 100vw;
-    padding-inline: 20px;
+    width: 1600px;
     margin-inline: auto;
     overflow: hidden;
 }
@@ -140,7 +136,6 @@ a {
     position: absolute;
 }
 
-
 .info {
     font-family: 'roboto', sans-serif;
     margin-inline-start: 200px;
@@ -154,7 +149,6 @@ a {
     top: 25%;
     left: -30px;
 }
-
 
 .info h1 {
     letter-spacing: 2px;
@@ -211,7 +205,6 @@ a {
     right: 180px;
 }
 
-
 .info2 h1 {
     letter-spacing: 2px;
     font-weight: 600;
@@ -242,8 +235,6 @@ a {
     cursor: pointer;
 }
 
-
-
 /* LINK LIST LI */
 .link-list {
     margin-block-start: 50px;
@@ -255,7 +246,6 @@ a {
     align-items: center;
     gap: 100px;
 }
-
 
 .link-list-li {
     gap: 15px;
@@ -270,7 +260,6 @@ a {
 }
 
 /* Device Section */
-
 .device-container {
     cursor: pointer;
     font-family: 'roboto', sans-serif;
@@ -316,7 +305,6 @@ a {
 }
 
 /* Poster */
-
 .poster {
     cursor: pointer;
     margin-block-start: 10px;
@@ -344,7 +332,7 @@ a {
     width: 450px;
     margin-inline-start: 110px;
     color: white;
-    /* transition: all 0.5s ease; */
+    transition: all 0.5s ease;
 }
 
 .poster-btn {
@@ -387,7 +375,7 @@ a {
 footer {
     background-color: #F2F2F2;
     width: 100%;
-    min-height: 400px;
+    height: 400px;
     color: #616161;
     font-family: 'roboto', sans-serif;
 
@@ -398,9 +386,8 @@ li {
 }
 
 .footer-list {
-    gap: 50px;
+    gap: 130px;
     padding-block-start: 50px;
-    flex-direction: column;
 }
 
 
@@ -455,18 +442,6 @@ button {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.315);
 }
 
-@keyframes info-ani {
-    0% {
-        opacity: 0;
-        transform: translateY(120px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
 
 @media only screen and (max-width: 400px) {
     body {
@@ -475,7 +450,7 @@ button {
 
     .container {
         width: 100vw;
-        padding-inline: 15px;
+        padding-inline: 12px;
     }
 
     .display-none {
@@ -488,10 +463,52 @@ button {
         font-size: 14px;
         padding-inline: 10px;
     }
-    .link-list-ul{
+
+    .link-list-ul {
         flex-direction: column;
     }
-    .device-section{
+
+    .device-section {
         flex-direction: column;
+    }
+
+    .device-container {
+        padding: 0;
+        width: 100%;
+    }
+
+    .device-container {
+        margin-block: 25px;
+    }
+
+    .footer{
+        min-height: 400px;
+    }
+
+    .footer-list {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .poster {
+        background-color: white;
+        flex-direction: column-reverse;
+        height: 400px;
+        padding: 20px;
+        gap: 50px;
+    }
+
+    .poster-info {
+        color: var(--text-color);
+    }
+
+    .poster-img {
+        height: 60%;
+    }
+
+    .poster-img img {
+        position: relative;
+        height: 100%;
+        top: 33px;
     }
 }

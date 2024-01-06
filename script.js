@@ -121,11 +121,13 @@ document.querySelector('.up-btn').addEventListener(('click') , function(){
 
 function matchMediaQuery(){
     let match = window.matchMedia('(max-width: 400px)');
-    let device = document.querySelector('.device-card')
-    let buscard = document.querySelector('.bus-card')
+    const next = document.querySelectorAll('.device-container-body');
     if(match.matches){
-        device.classList.remove('container')
-        buscard.classList.remove('container')
+        next.forEach(value=>{
+            newelement = document.createElement('h2');
+            newelement.innerHTML = value.firstElementChild.innerHTML;
+            value.replaceChild(newelement , value.firstElementChild)
+        })
     }
 }
 
@@ -134,3 +136,6 @@ matchMediaQuery();
 window.addEventListener('resize' , ()=>{
     matchMediaQuery();
 })
+
+
+
