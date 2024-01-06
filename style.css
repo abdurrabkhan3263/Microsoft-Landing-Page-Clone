@@ -375,7 +375,7 @@ a {
 footer {
     background-color: #F2F2F2;
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     color: #616161;
     font-family: 'roboto', sans-serif;
 
@@ -481,10 +481,6 @@ button {
         margin-block: 25px;
     }
 
-    .footer{
-        min-height: 400px;
-    }
-
     .footer-list {
         gap: 30px;
         flex-direction: column;
@@ -494,7 +490,7 @@ button {
         background-color: white;
         flex-direction: column-reverse;
         height: 400px;
-        padding: 20px;
+        padding: 15px;
         gap: 50px;
     }
 
@@ -510,5 +506,69 @@ button {
         position: relative;
         height: 100%;
         top: 33px;
+    }
+    .info {
+        font-family: 'roboto', sans-serif;
+        margin-inline-start: 228px;
+        height: 45%;
+        width: 101vw;
+        flex-direction: column;
+        gap: -20px;
+        margin-block-start: 178px;
+        position: absolute;
+        left: -229px;
+        bottom: 0;
+        background-color: white;
+    }
+    .info2 {
+        font-family: 'roboto', sans-serif;
+        margin-inline-start: 228px;
+        height: 45%;
+        width: 101vw;
+        flex-direction: column;
+        gap: -20px;
+        margin-block-start: 178px;
+        position: absolute;
+        left: -229px;
+        bottom: 0;
+        background-color: white;
+    }
+    .slider1 {
+        box-sizing: border-box;
+        height: 700px;
+        width: 100%;
+        transform: translateX(0px);
+        transition: all 1.3s ease;
+        position: absolute;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    .slider2 {
+        box-sizing: border-box;
+        height: 700px;
+        width: 100%;
+        transform: translateX(0px);
+        transition: all 1.3s ease;
+        position: absolute;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    .slider1-img img{
+        width: 100%;
+        height: 51%;
+        object-fit: cover;
+    }
+    .slider {
+        margin-block-start: 60px;
+        margin-inline: auto;
+        height: 590px;
+        justify-content: space-evenly;
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-color);
+        position: relative;
+        align-items: center;
+        overflow: hidden;
+        background-color: white;
+
     }
 }

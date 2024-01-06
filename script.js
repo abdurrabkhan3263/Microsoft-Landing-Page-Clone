@@ -122,11 +122,90 @@ document.querySelector('.up-btn').addEventListener(('click') , function(){
 function matchMediaQuery(){
     let match = window.matchMedia('(max-width: 400px)');
     const next = document.querySelectorAll('.device-container-body');
+    const slider = document.querySelector('.slider')
     if(match.matches){
         next.forEach(value=>{
             newelement = document.createElement('h2');
             newelement.innerHTML = value.firstElementChild.innerHTML;
             value.replaceChild(newelement , value.firstElementChild)
+            slider.innerHTML = '';
+            slider.innerHTML = `
+            <div class="slider1">
+                <div class="info flex">
+                    <h2>
+                        Maximise the everyday with Microsoft 362
+                    </h2>
+                    <p>
+                        Get online protection, secure cloud storage and innovative apps designed to fit your needs – all
+                        in one plan.
+                    </p>
+                    <div class="slide-btn flex">
+                        <button type="button" class="inside-slide-btn">For One Person</button>
+                        <a href="#" class="device-container-a slide-anchor">For up to six people</a>
+                        <i class="slider-arrow fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="slider1-img">
+                    <img src="Images/girls.jpg" alt="img">
+                </div>
+            </div>
+            <div class="slider2">
+                <div class="slider2-img">
+                    <img src="Images/Highlight-Surface-Pro-9-M1-Family-02-1_VP2-859x540.jpg" alt="img">
+                </div>
+                <div class="info2 flex">
+                    <h2>
+                        Surface 9 Pro
+                    </h2>
+                    <p>
+                        Tablet versatility and laptop power — all in one ultra-portable device
+                    </p>
+                    <div class="slide-btn flex">
+                        <button type="button" class="inside-slide-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-btn flex">
+            <i class="slide-play-btn fa-solid fa-pause"></i>
+            <i class="slide-arrow-left slide-btn-left fa-solid fa-chevron-left"></i>
+            <i class="slide-circle-btn1 fa-regular fa-circle"></i>
+            <i class="slide-circle-btn2 fa-solid fa-circle"></i>
+            <i class="slide-arrow-right slide-btn-right fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="link-list">
+            <ul class="flex container link-list-ul">
+                <li class="link-list-li">
+                    <i class="fa-brands fa-microsoft fa-2x"></i>
+                    <a href="#" class="link-list-a">Choose your Microsoft 365</a>
+                </li>
+                <li class="link-list-li">
+                    <i class="fa-brands fa-xbox fa-2x"></i>
+                    <a href="#" class="link-list-a">Shop Xbox games and consoles</a>
+                </li>
+                <li class="link-list-li">
+                    <i class="fa-brands fa-microsoft fa-2x"></i>
+                    <a href="#" class="link-list-a">Get Windows 11</a>
+                </li>
+                <li class="link-list-li">
+                    <i class="fa-solid fa-tablet fa-2x"></i>
+                    <a href="#" class="link-list-a">Explore Surface devices</a>
+                </li>
+            </ul>
+        </div>
+        <div class="device-section container flex device-card">
+            <div class="device-container flex">
+                <div class="device-container-img">
+                    <img src="Images/Content-Card-Surface-Laptop-5-M1-Platinum-01-1.jpg" alt="">
+                </div>
+                <div class="device-container-body flex">
+                    <h2>Surface Laptop 5</h2>
+                    <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+                </div>
+                <div class="device-container-footer">
+                    <a href="#" class="device-container-a">Learn More</a>
+                    <i class="device-container-arrow fa-solid fa-chevron-right "></i>
+                </div>`
         })
     }
 }
