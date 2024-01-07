@@ -20,6 +20,23 @@ stripText.addEventListener('mouseleave' , ()=>{
     stripArrow.style.transform = `translateX(0px)`
 })
 
+const allMicrosoft = document.querySelector('.all-microsoft');
+const allMicrosoftClick = document.querySelector('.click-all-microsoft')
+
+document.addEventListener('click', (e) => {
+    if (!allMicrosoft.contains(e.target)) {
+        allMicrosoft.classList.remove('all-microsoft-click-background');
+        allMicrosoftClick.classList.remove('visible')
+    }
+});
+
+
+allMicrosoft.addEventListener('click' , (e)=>{
+    e.stopPropagation();
+    allMicrosoft.classList.toggle('all-microsoft-click-background');
+    allMicrosoftClick.classList.toggle('visible')
+})
+
 // IMAGE - SLIDER
 // aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 const arrowRight = document.querySelector('.slide-arrow-right');
@@ -123,7 +140,9 @@ function matchMediaQuery(){
     let match = window.matchMedia('(max-width: 400px)');
     const next = document.querySelectorAll('.device-container-body');
     const slider = document.querySelector('.slider')
-    if(match.matches){
+    if(!match.matches){
+        return
+    }else if(match.matches){
         next.forEach(value=>{
             newelement = document.createElement('h2');
             newelement.innerHTML = value.firstElementChild.innerHTML;
